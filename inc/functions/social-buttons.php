@@ -10,8 +10,11 @@
 
 function recensility_header_social_buttons() { ?>
 
-<div class="recensility-top-social-icons tooltip">
-        <span class="tooltiptext">Seguici sui nostri social e unisciti alla nostra community</span>
+<div id="recensility-top-social-icons" class="recensility-top-social-icons tooltip">
+        <span id="social-tooltip" class="tooltiptext">Seguici sui nostri social e unisciti alla nostra community</span>
+        <a id="recensility-burger-menu-icon" href="javascript:void(0);" class="recensility-burger-menu-icon white inline-block" onclick="burgerFunction()">
+                <i class="fas fa-bars"></i>
+        </a>
     <?php if ( recensility_get_option('twitterlink') ) : ?>
             <a href="<?php echo esc_url( recensility_get_option('twitterlink') ); ?>" target="_blank" class="recensility-social-icon-twitter white inline-block" title="<?php esc_attr_e('Segui il nostro Twitter','recensility'); ?>"><i class="fab fa-twitter" aria-hidden="true"></i></a><?php endif; ?>
     <?php if ( recensility_get_option('facebooklink') ) : ?>
@@ -72,7 +75,7 @@ function recensility_header_social_buttons() { ?>
             <a href="mailto:<?php echo esc_html( recensility_get_option('emailaddress') ); ?>" class="recensility-social-icon-email white inline-block" title="<?php esc_attr_e('Contattaci qui','recensility'); ?>"><i class="fas fa-envelope" aria-hidden="true"></i></a><?php endif; ?>
     <?php if ( recensility_get_option('rsslink') ) : ?>
             <a href="<?php echo esc_url( recensility_get_option('rsslink') ); ?>" target="_blank" class="recensility-social-icon-rss white inline-block" title="<?php esc_attr_e('RSS','recensility'); ?>"><i class="fas fa-rss" aria-hidden="true"></i></a><?php endif; ?>
-    <a href="<?php echo esc_url( '#' ); ?>" title="<?php esc_attr_e('Search','recensility'); ?>" class="recensility-social-search-icon white inline-block"><i class="fab fa-sistrix"></i></a>
+    <a id="search" href="<?php echo esc_url( '#' ); ?>" title="<?php esc_attr_e('Search','recensility'); ?>" class="recensility-social-search-icon white inline-block"><i class="fab fa-sistrix"></i></a>
 </div>
 
 <?php }

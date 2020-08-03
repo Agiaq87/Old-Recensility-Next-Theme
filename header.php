@@ -31,7 +31,15 @@
 <div class="recensility-secondary-menu-container-inside clearfix">
 
 <nav class="recensility-nav-secondary" id="recensility-secondary-navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement" role="navigation">
-<?php wp_nav_menu( array( 'theme_location' => 'secondary', 'menu_id' => 'recensility-menu-secondary-navigation', 'menu_class' => 'recensility-secondary-nav-menu recensility-menu-secondary', 'fallback_cb' => 'recensility_top_fallback_menu', ) ); ?>
+<?php 
+    wp_nav_menu( 
+        array( 
+                'theme_location' => 'secondary', 
+                'menu_id' => 'recensility-menu-secondary-navigation', 
+                'menu_class' => 'recensility-secondary-nav-menu recensility-menu-secondary', 
+                'fallback_cb' => 'recensility_top_fallback_menu' 
+            ) 
+    ); ?>
 </nav>
 
 </div>
@@ -80,7 +88,9 @@
 <?php if ( !(recensility_get_option('disable_primary_menu')) ) { ?>
 
 <nav class="recensility-nav-primary" id="recensility-primary-navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement" role="navigation">
-<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'recensility-menu-primary-navigation', 'menu_class' => 'recensility-nav-primary-menu recensility-menu-primary', 'fallback_cb' => 'recensility_fallback_menu', ) ); ?>
+    <div id="recensility-menu-primary-silencer">
+        <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'recensility-menu-primary-navigation', 'menu_class' => 'recensility-nav-primary-menu recensility-menu-primary', 'fallback_cb' => 'recensility_fallback_menu', ) ); ?>
+    </div>
 </nav>
 
 <?php if ( !(recensility_get_option('hide_header_social_buttons')) ) { recensility_header_social_buttons(); } ?>

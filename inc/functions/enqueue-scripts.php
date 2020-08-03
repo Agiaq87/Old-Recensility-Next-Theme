@@ -32,7 +32,7 @@ add_action(
             wp_enqueue_script('ResizeSensor', get_template_directory_uri() .'/js/ResizeSensor.min.js', array( 'jquery' ), NULL, true);
             wp_enqueue_script('theia-sticky-sidebar', get_template_directory_uri() .'/assets/js/theia-sticky-sidebar.min.js', array( 'jquery' ), NULL, true);
         }
-        //wp_enqueue_script('customjs', get_template_directory_uri() .'/js/custom.js', array( 'jquery' ), NULL, true);
+        wp_enqueue_script('customjs', get_template_directory_uri() .'/js/custom.js', array( 'jquery' ), NULL, true);
         
         //wp_enqueue_scripts('recensility', get_template_directory_uri() . '/js/recensility.js');
         if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

@@ -32,16 +32,16 @@ if($t1->have_posts()){
   $t1 = $t1->the_post();
 }
 ?>
-       <div class="the-post-content">
-          <div class="recensility-posts-lastest">
-              <a class="recensility-posts-container-lastest-img" href="<?php echo get_permalink()?>"><?php echo get_the_post_thumbnail(get_the_ID(),'ri-recent-thumbnails') ?></a>
-          </div>
-          <div class="recensility-posts-lastest-preamble">
-              <a class="recensility-posts-lastest-preamble-title-item font18" href="<?php echo get_permalink() ?>"><?php echo get_the_title() ?></a>
-                <p class="recensility-posts-lastest-preamble-title-date font14">di <strong class="main-color-text"><?php echo get_the_author() ?></strong>, pubblicato il <strong class="main-color-text"><?php echo get_the_date() ?></strong> <?php  the_category(' '); ?></p>
-                <p class="recensility-posts-lastest-preamble-title-excerpt"><?php echo substr(get_the_excerpt(),0,300).'... ' ?><strong><a href="<?php echo get_permalink() ?>">Continua a leggere</a></strong></p>
-          </div>
-      </div>
+        <div class="the-post-content">
+                <div class="recensility-posts-lastest">
+                    <a class="recensility-posts-container-lastest-img" href="<?php echo get_permalink()?>"><?php echo get_the_post_thumbnail(get_the_ID(),'ri-recent-thumbnails') ?></a>
+                </div>
+                <div class="recensility-posts-lastest-preamble">
+                    <a class="recensility-posts-lastest-preamble-title-item font18" href="<?php echo get_permalink() ?>"><?php echo get_the_title() ?></a>
+                      <p class="recensility-posts-lastest-preamble-title-date font14">di <strong class="main-color-text"><?php echo get_the_author() ?></strong>, pubblicato il <strong class="main-color-text"><?php echo get_the_date() ?></strong> <?php  the_category(' '); ?></p>
+                      <p class="recensility-posts-lastest-preamble-title-excerpt"><?php echo substr(get_the_excerpt(),0,300).'... ' ?><strong><a href="<?php echo get_permalink() ?>">Continua a leggere</a></strong></p>
+                </div>
+        </div>
     </div>
 </div>
 
@@ -116,6 +116,7 @@ if($t1->have_posts()){
 </div>
 <?php dynamic_sidebar( 'recensility-center-up-home-widgets' ); ?>    
 <?php dynamic_sidebar( 'recensility-center-up-2-home-widgets' ); ?>
+
 <div class="recensility-posts">
 <h1 class="recensility-posts-heading white"><span><i class="fas fa-microscope"></i> Recensioni</span></h1>
 <div class="recensility-posts-content-lastest hidden no-padding">
@@ -127,15 +128,15 @@ if($t1->have_posts()){
 }
 ?>
       <div class="the-post-content">
-			 <div class="recensility-posts-lastest">
-                             <a class="recensility-posts-container-lastest-img" href="<?php echo get_permalink()?>"><?php echo get_the_post_thumbnail(get_the_ID(),'ri-recent-thumbnails') ?></a>
-			 </div>
-			 <div class="recensility-posts-lastest-preamble">
-			 		<a class="recensility-posts-lastest-preamble-title-item font18" href="<?php echo get_permalink() ?>"><?php echo get_the_title() ?></a>
-                                        <p class="recensility-posts-lastest-preamble-title-date font14">di <strong class="main-color-text"><?php echo get_the_author() ?></strong>, pubblicato il <strong class="main-color-text"><?php echo get_the_date() ?></strong> <?php  the_category(' '); ?></p>
-                                         
-                                        <p class="recensility-posts-lastest-preamble-title-excerpt"><?php echo substr(get_the_excerpt(),0,300).'... ' ?><strong><a href="<?php echo get_permalink() ?>">Continua a leggere</a></strong></p>
-       </div>
+        <div class="recensility-posts-lastest">
+                              <a class="recensility-posts-container-lastest-img" href="<?php echo get_permalink()?>"><?php echo get_the_post_thumbnail(get_the_ID(),'ri-recent-thumbnails') ?></a>
+        </div>
+        <div class="recensility-posts-lastest-preamble">
+            <a class="recensility-posts-lastest-preamble-title-item font18" href="<?php echo get_permalink() ?>"><?php echo get_the_title() ?></a>
+                                          <p class="recensility-posts-lastest-preamble-title-date font14">di <strong class="main-color-text"><?php echo get_the_author() ?></strong>, pubblicato il <strong class="main-color-text"><?php echo get_the_date() ?></strong> <?php  the_category(' '); ?></p>
+                                          
+                                          <p class="recensility-posts-lastest-preamble-title-excerpt"><?php echo substr(get_the_excerpt(),0,300).'... ' ?><strong><a href="<?php echo get_permalink() ?>">Continua a leggere</a></strong></p>
+        </div>
       </div>
     </div>
      <div class="recensility-posts-container-lastest no-padding">
@@ -201,6 +202,7 @@ if($t1->have_posts()){
     </div>   
    </div>
   </div>
+
      <div class="recensility-posts-container-lastest no-padding">
 <?php
 $t1 = new WP_Query( array( 'category_name' => 'TUTORIAL' ) );
@@ -238,9 +240,37 @@ if($t1->have_posts()){
     </div>
 </div>
 </div>
+
+  <!-- Lastest 15 posts -->
+  <h1 class="recensility-posts-heading white"><span><i class="fas fa-bullhorn"></i> potrebbe interessarti anche </span></h1>
+  <div class="recensility-posts-content-lastest hidden no-padding">
+      
+          <?php
+          $temp = new WP_Query( array( 'show_post' => 15,'author' => '-2' ) );
+          while ($temp->have_posts()){
+            $t1 = $temp->the_post();
+          ?>
+          <div class="recensility-posts-container-lastest no-padding">
+            <div class="the-post-content">
+                    <div class="recensility-posts-lastest">
+                        <a class="recensility-posts-container-lastest-img" href="<?php echo get_permalink()?>"><?php echo get_the_post_thumbnail(get_the_ID(),'ri-recent-thumbnails') ?></a>
+                    </div>
+                    <div class="recensility-posts-lastest-preamble">
+                        <a class="recensility-posts-lastest-preamble-title-item font18" href="<?php echo get_permalink() ?>"><?php echo get_the_title() ?></a>
+                          <p class="recensility-posts-lastest-preamble-title-date font14">di <strong class="main-color-text"><?php echo get_the_author() ?></strong>, pubblicato il <strong class="main-color-text"><?php echo get_the_date() ?></strong> <?php  the_category(' '); ?></p>
+                          <p class="recensility-posts-lastest-preamble-title-excerpt"><?php echo substr(get_the_excerpt(),0,300).'... ' ?><strong><a href="<?php echo get_permalink() ?>">Continua a leggere</a></strong></p>
+                    </div>
+            </div>
+          </div>
+          <?php } ?>
+      
+  </div>
+  <!-- Lastest 15 posts ending -->
+
 </div>
 <?php dynamic_sidebar( 'recensility-center-down-3-home-widgets' ); ?>
 <?php dynamic_sidebar( 'recensility-center-down-4-home-widgets' ); ?>
+
     <div class="recensility-posts-container">
 <?php
   wp_reset_postdata();

@@ -907,27 +907,21 @@ Text Domain: Recensility WordPress Theme
     }
     
     .recensility-nav-primary {
-        float: none;
         background: #2f6d43;
     }
     
     .recensility-nav-primary-menu {
-        margin: 0;  
         list-style: none;
         list-style-type: none
     }
     
     .recensility-nav-primary-menu li {
         display: inline-block;
-        padding-bottom: 0;
     }
     
     .recensility-nav-primary-menu a {
         color: #fff;
-        display: block;
-        padding: 0.625em;
-        position: relative;
-        background: #2f6d43;
+        padding: 1em;
         text-shadow: 0.125em 0.125em #111;
         font: bold 18px "Gudea", sans-serif;
     }
@@ -1007,6 +1001,14 @@ Text Domain: Recensility WordPress Theme
         color: #fff
     }
     
+    .recensility-primary-menu-container.recensility-fixed {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 400
+    }
+
     .recensility-primary-responsive-menu-icon {
         cursor: pointer;
         display: none;
@@ -1056,11 +1058,9 @@ Text Domain: Recensility WordPress Theme
     
     .recensility-posts .recensility-posts-heading span {
         padding: 0.3125em 0.625em 0.3125em 0.625em;
-        display: inline-block;
         background: #2f6d43;
         position: relative;
-        vertical-align: bottom;
-        margin: 0 2% 0 0;
+        margin: 0 4% 0 0;
     }
     
     .recensility-posts .recensility-posts-heading span:after {
@@ -1918,7 +1918,7 @@ Text Domain: Recensility WordPress Theme
     
     .recensility-top-social-icons a {
         font-size: 30px;
-        padding: 0em 0.5em 0em 0.5em;
+        padding: 0em 0.4em 0em 0.4em;
     }
     
     .recensility-top-social-icons a:hover {
@@ -2648,5 +2648,7 @@ Text Domain: Recensility WordPress Theme
     .the-post-content{
     	display: flex;
     }
-    
-    
+
+    #recensility-burger-menu-icon {
+        display: none;
+    }

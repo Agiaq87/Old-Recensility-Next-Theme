@@ -87,9 +87,55 @@
         height: auto;
     }
 
-    .recensility-posts .recensility-posts-heading span{
+    .recensility-posts .recensility-posts-heading span {
        padding: .3125em .625em .3125em .625em;
        display: inline-block;
        background: #2f6d43;
+    }
+
+    #search {
+        display: none;
+    }
+
+    #recensility-menu-primary-navigation{
+        display: grid;
+        margin: 2em 0em 2em 0em;
+    }
+
+    #recensility-top-social-icons {
+        display: flex;
+    }
+
+    #recensility-sidebar-one-wrapper {
+        width: auto;
+        flex: auto;
+        max-width: fit-content;
+        order: 1;
+    }
+
+    .recensility-main-wrapper-inside {
+        padding: 0em 0em 0em 0em;
+    }
+
+    .recensility-main-wrapper {
+        width: 95%;
+        flex: 0 0 97%;
+        max-width: 95%;
+        order: 0;
+    }
+
+    .recensility-burger-menu-icon {
+        display: block !important;
+    }
+
+    .recensility-secondary-responsive-menu-icon::before {
+        color: #fff;
+        content: "\f0c9";
+        font: normal 18px/1 FontAwesome;
+        margin: 0 auto
+    }
+
+    .recensility-burger-menu-icon:hover {
+        background-color: #000;
     }
 }
