@@ -1,4 +1,4 @@
-/*
+********************************************************** WARNING: THIS IS IN AN ALPHA STATE **********************************************************
 Recensility is a WordPress Theme,
 Copyright (C) 2020, Alessandro Giaquinto
 Recensility is distributed under the terms of the GNU/GPLv2 or later
@@ -10,7 +10,6 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY 
 You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
 
 https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
-*/
 
 Theme
 =====
